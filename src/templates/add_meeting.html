@@ -1,0 +1,19 @@
+<div class="scrollable">
+    <div class="scrollable-content">
+        <form method="post" id="meetingForm" ng-controller="MeetingController as meetingCtrl" novalidate>
+            <label for="name">Betreff:</label>
+            <input id="name" class="form-control" type="text" required="required" placeholder="Name" ng-model="meetingCtrl.meeting.subject"/>
+            <member-list ng-model="meetingCtrl.meeting.members"></member-list>
+            <datetime-picker my-placeholder="Startzeit" my-label="Startzeit" ng-model="meetingCtrl.meeting.start"></datetime-picker>
+            <datetime-picker my-placeholder="Endzeit" my-label="Endzeit" ng-model="meetingCtrl.meeting.end"></datetime-picker>
+            <label for="location">Ort:</label>
+            <input id="location" required="required" type="text" ng-model="meetingCtrl.meeting.location" placeholder="Ort auswählen/eingeben" typeahead="address for address in meetingCtrl.getLocation($viewValue)" typeahead-min-length="3" class="form-control">
+            <datepicker ng-model="meetingCtrl.meeting.test" min-date="minDate" show-weeks="true" class="well well-sm"></datepicker>
+            <br>
+            <button type="button" class="form-control" ng-click="meetingCtrl.submitForm()">
+                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Sitzung erstellen
+            </button>
+            {{meetingCtrl.meeting | json}}
+        </form>
+    </div>
+</div>
