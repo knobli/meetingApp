@@ -1,12 +1,20 @@
 {
   "name": "meeting-app",
   "version": "0.0.0",
+  "homepage": "https://github.com/knobli/meetingApp",
+  "authors": [
+        "knobli"
+  ],
   "private": true,
   "dependencies": {
     "angular": "1.x",
     "angular-route": "1.x",
     "mobile-angular-ui": "1.2.x",
     "font-awesome": "4.2",
-    "bootstrap": "3.x"
+    "bootstrap": "3.x",
+    "jquery": "~2.1.4",
+    "angular-bootstrap": "~0.13.0",
+    "angular-ui-select": "~0.11.2",
+    "smalot-bootstrap-datetimepicker": "~2.3.4"
   }
 }
