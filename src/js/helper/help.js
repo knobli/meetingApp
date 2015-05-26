@@ -17,7 +17,7 @@ function getMemberStatusCss(memberStatus){
 }
 
 function getBaseUrl(){
-    return 'http://localhost/tvdb_wetten';
+    return 'https://grafstal.ch/';
 }
 
 function getAjaxUrl() {
@@ -50,19 +50,6 @@ function getDateStamp(date) {
 	return output;
 }
 
-function getDateTimeStamp(date) {
-	return getDateStamp(date) + ' ' + getTimeStamp(date);
-}
-
-function getDateString(date) {
-	var weekDays = new Array("Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag");
-	var months = new Array("Januar", "Februar", "M&auml;rz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember");
-	var day = date.getDate();
-
-	var output = weekDays[date.getDay()] + ', ' + (day < 10 ? '0' : '') + day + '. ' + months[date.getMonth()] + ' ' + date.getFullYear();
-	return output;
-}
-
 function getStartEndDate(startDate, endDate) {
 	if (startDate.getFullYear() != endDate.getFullYear() || startDate.getMonth() != endDate.getMonth() || startDate.getDate() != endDate.getDate()) {
 		endStamp = getDateStamp(endDate) + ' ' + getTimeStamp(endDate);
@@ -72,25 +59,6 @@ function getStartEndDate(startDate, endDate) {
 	var startStamp = getDateStamp(startDate) + ' ' + getTimeStamp(startDate);
 	var output = startStamp + ' - ' + endStamp;
 	return output;
-}
-
-function getUrlParameter(url, sParam) {
-	var sPageURL = url.split("?")[1];
-	if(sPageURL !== undefined){
-		var sURLVariables = sPageURL.split('&');
-		for (var i = 0; i < sURLVariables.length; i++) {
-			var sParameterName = sURLVariables[i].split('=');
-			if (sParameterName[0] == sParam) {
-				return sParameterName[1];
-			}
-		}
-	}
-	return null;
-}
-
-function getParameterByName(name) {
-	var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
-	return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
 }
 
 function alertErrorMessage(msg, errorMessages){
@@ -132,9 +100,4 @@ function getUserId() {
 
 function getUsername() {
 	return window.localStorage.getItem(usernameKey);
-}
-
-function isNearBottom(){
-	var heightOffset = 100;
-	return ($(window).scrollTop()+heightOffset >= $(document).height() - $(window).height());
 }

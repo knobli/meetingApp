@@ -8,7 +8,7 @@
         this.login = {};
         this.submitForm = function(){
             $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
-            $http.post('http://localhost/tvdb_wetten/controller/json/v0.4/login.php' , $.param(loginCtrl.login)).
+            $http.post(getAPIUrl() + '/login.php' , $.param(loginCtrl.login)).
                 success(function(data){
                     if(data.success){
                         loginCtrl.loggedIn = true;

@@ -3,7 +3,13 @@
         <form method="post" id="meetingForm" ng-controller="MeetingController as meetingCtrl" novalidate>
             <label for="name">Betreff:</label>
             <input id="name" class="form-control" type="text" required="required" placeholder="Name" ng-model="meetingCtrl.meeting.subject"/>
-            <member-list ng-model="meetingCtrl.meeting.members"></member-list>
+            <label for="memberSelect">Mitglieder:</label><br>
+            <ui-select id="memberSelect" multiple ng-model="meetingCtrl.meeting.members" theme="bootstrap" ng-disabled="disabled" style="width:100%;">
+                <ui-select-match placeholder="Wähle aus den Benutzern aus">{{$item.firstname}} {{$item.surname}}</ui-select-match>
+                <ui-select-choices repeat="member.id as member in meetingCtrl.members | filter: $select.search">
+                    {{member.firstname}} {{member.surname}}
+                </ui-select-choices>
+            </ui-select>
             <datetime-picker my-placeholder="Startzeit" my-label="Startzeit" ng-model="meetingCtrl.meeting.start"></datetime-picker>
             <datetime-picker my-placeholder="Endzeit" my-label="Endzeit" ng-model="meetingCtrl.meeting.end"></datetime-picker>
             <label for="location">Ort:</label>

@@ -13,7 +13,7 @@
                 myPlaceholder: '@',
                 myLabel: '@'
             },
-            require: ['?^ngModel'],
+            require: 'ngModel',
             link: function(scope, element, attrs, ngModelCtrl) {
                 var dpElement = $(element).find('.datetime-picker');
                 dpElement.datetimepicker({
@@ -23,10 +23,10 @@
                     startDate: new Date(),
                     minuteStep: 10
                 });
-                dpElement.on('dp.change', function(event) {
+               dpElement.on('changeDate', function(ev) {
                     //need to run digest cycle for applying bindings
                     scope.$apply(function() {
-                        ngModelCtrl.$setViewValue(event.date);
+                        ngModelCtrl.$setViewValue(ev.date.toLocaleString());
                     });
                 });
             }

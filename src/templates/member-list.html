@@ -1,10 +1,14 @@
 <label for="memberSelect">Mitglieder:</label><br>
-<select data-placeholder="Wähle aus den Mitgliedern aus"
+<ui-select multiple
         id="memberSelect"
+        theme="bootstrap"
 	    class="form-control"
-        multiple="multiple"
         style="width:100%;"
         ng-model="ngModel"
-        required="required"
-        ng-options="member.id as (member.firstname + ' ' + member.surname) for member in memberCtrl.members">
-</select>
+        ng-disabled="disabled"
+        required="required">
+    <ui-select-match placeholder="Wähle aus den Mitgliedern aus">{{member.firstname + ' ' + member.surname}}</ui-select-match>
+    <ui-select-choices repeat="member.id as (member.firstname + ' ' + member.surname) for member in memberCtrl.members">
+        <div>{{member.firstname | highlight: $select.search}} {{member.surname | highlight: $select.search}}</div>
+    </ui-select-choices>
+</ui-select>
