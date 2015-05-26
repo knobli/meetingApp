@@ -1,3 +1,92 @@
 @import "mobile-angular-ui/src/less/mobile-angular-ui.less";
 @import "mixins.less";
 @import "variables.less";
+
+.ui-block-a, .ui-block-b, .ui-block-c, .ui-block-d, .ui-block-e {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  float: left;
+  min-height: 1px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ui-block-a {
+  clear: left;
+}
+
+.ui-grid-a>.ui-block-a, .ui-grid-a>.ui-block-b {
+  width: 50%;
+}
+
+.ui-li-aside {
+  position: absolute;
+  top: 1em;
+  right: 3.333em;
+  margin: 0;
+  text-align: right;
+}
+
+.list-group>a h1, .list-group>a h2, .list-group>a h3, .list-group>a h4, .list-group>a h5, .list-group>a h6 {
+  font-size: 1.5em;
+  font-weight: 700;
+  display: block;
+  margin: .45em 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.signin {
+  background: rgba(71, 121, 42, 0.6) !important;
+  text-shadow: 0 1px 0 rgba(71, 121, 42, 0.2) !important;
+  &:hover {
+    background: rgba(71, 121, 42, 0.8) !important;
+    text-shadow: 0 1px 0 rgba(71, 121, 42, 0.4) !important;
+  }
+}
+
+.signout {
+  background: rgba(215, 44, 44, 0.6) !important;
+  text-shadow: 0 1px 0 rgba(215, 44, 44, 0.2) !important;
+  &:hover {
+    background: rgba(215, 44, 44, 0.8) !important;
+    text-shadow: 0 1px 0 rgba(215, 44, 44, 0.4) !important;
+  }
+}
+
+.text-indent {
+  padding-left: 10px;
+}
+
+/**
+* Adjust color of mobile angular ui
+*/
+
+.app {
+  background: #f9f9f9;
+}
+
+.navbar-app{
+  color: white;
+}
+
+.navbar-app {
+  border-color: #000000;
+  background: #000000;
+}
+
+.sidebar-left {
+  background: #2a2a2a;
+}
+
+a {
+  color: white;
+}
+
+.ng-dirty input.ng-invalid, input.ng-invalid, textarea.ng-invalid, select.ng-invalid {
+  border-color: #ccc;
+}
+

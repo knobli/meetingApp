@@ -1,22 +1,18 @@
-<section class="section container-fluid">
-    <div class="scrollable">
-        <div class="scrollable-content" ng-controller="MeetingController as meetingCtrl">
-            <ul>
-                <li ng-repeat="meetingContainer in meetingCtrl.meetings">
-                    <a href="meeting.html?id={{meetingContainer.object.id}}" ng-class="meetingCtrl.getSigninClass(meetingContainer.status)">
-                        <fieldset class="ui-grid-a">
-                            <div class="ui-block-a">
-                                <h2>{{meetingContainer.object.name}}</h2>
-                                <p><strong>{{meetingContainer.object.location.name}}</strong></p>
-                            </div>
-                            <div class="ui-block-b ui-li-aside">
-                                <p><strong>{{meetingContainer.object.startDate.date | myDate:'HH:mm'}}</strong></p>
-                                <p>{{meetingContainer.object.responsible | memberName}}</p>
-                            </div>
-                        </fieldset>
-                    </a>
-                </li>
-            </ul>
+<div class="scrollable">
+    <div class="scrollable-content" ng-controller="MeetingController as meetingCtrl">
+        <div class="list-group">
+                <a class="list-group-item" href="#/meeting/{{meetingContainer.object.id}}" ng-repeat="meetingContainer in meetingCtrl.meetings" ng-class="meetingCtrl.getSigninClass(meetingContainer.status)">
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <h2>{{meetingContainer.object.name}}</h2>
+                            <strong>{{meetingContainer.object.location.name}}</strong>
+                        </div>
+                        <div class="ui-block-a ui-li-aside">
+                            <p><strong>{{meetingContainer.object.startDate.date | myDate:'HH:mm'}}</strong></p>
+                            {{meetingContainer.object.responsible | memberName}}
+                        </div>
+                    </fieldset>
+                </a>
         </div>
     </div>
-</section>
+</div>

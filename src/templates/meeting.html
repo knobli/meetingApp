@@ -1,0 +1,48 @@
+<section class="section container-fluid">
+    <div class="scrollable">
+        <div class="scrollable-content" ng-controller="MeetingController as meetingCtrl">
+            <div class="list-group">
+                <div class="list-group-item list-group-item-home media">
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a"><strong>Ort</strong></div>
+                        <div class="ui-block-b text-with-nl">{{meetingCtrl.loadMeeting.object.location.name}}</div>
+                    </fieldset>
+                </div>
+                <div class="list-group-item list-group-item-home media">
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a"><strong>Datum</strong></div>
+                        <div class="ui-block-b text-with-nl">{{meetingCtrl.loadMeeting.object | beginEndDate}}</div>
+                    </fieldset>
+                </div>
+                <div class="list-group-item list-group-item-home media">
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a"><strong>Verantwortlicher</strong></div>
+                        <div class="ui-block-b text-with-nl">{{meetingCtrl.loadMeeting.object.responsible | memberName}}</div>
+                    </fieldset>
+                </div>
+                <div class="list-group-item list-group-item-home media">
+                    <fieldset class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <button type="button" ng-show="meetingCtrl.loadMeeting && meetingCtrl.loadMeeting.status !== 1" class="form-control" ng-click="meetingCtrl.signin(1)">
+                                <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> Anmelden
+                            </button>
+                        </div>
+                        <div class="ui-block-b">
+                            <button type="button" ng-show="meetingCtrl.loadMeeting && meetingCtrl.loadMeeting.status !== 0" class="form-control" ng-click="meetingCtrl.signin(0)">
+                                <span class="glyphicon glyphicon-minus-sign" aria-hidden="true"></span> Abmelden
+                            </button>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="list-group-item list-group-item-home media" ng-show="meetingCtrl.loadMeeting.entries.length > 0">
+                    <p><strong>Anmeldungen  (Anmeldungen: {{meetingCtrl.loadMeeting.entries.length}})</strong></p>
+                    <p class="text-indent">
+                        <span ng-repeat="entry in meetingCtrl.loadMeeting.entries">
+                            {{entry.member | memberName}}<br>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
