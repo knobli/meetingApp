@@ -3,3 +3,13 @@
 .cordova
 bower_components
 node_modules
+www/css/app.min.css
+www/css/bootstrap-datetimepicker.css
+www/css/bootstrap-theme.css
+www/css/bootstrap.css
+www/css/hover.min.css
+www/fonts/fontawesome-webfont.svg
+www/fonts/glyphicons-halflings-regular.svg
+www/index.html
+www/js/app.min.js
+www/js/app.min.js.map
