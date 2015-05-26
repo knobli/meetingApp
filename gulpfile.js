@@ -17,9 +17,9 @@ var config = {
 	  './bower_components/jquery/dist/jquery.js',
 	  './bower_components/angular-bootstrap/ui-bootstrap.js',
 	  './bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
-	  './bower_components/select2/dist/js/select2.js',
 	  './bower_components/smalot-bootstrap-datetimepicker/js/bootstrap-datetimepicker.js',
-	  './bower_components/smalot-bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.de.js'
+	  './bower_components/smalot-bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.de.js',
+	  './bower_components/angular-ui-select/dist/select.js'
     ],
 	
 	css: [
@@ -27,8 +27,8 @@ var config = {
 	  './bower_components/bootstrap/dist/css/bootstrap.css.map',
 	  './bower_components/bootstrap/dist/css/bootstrap-theme.css',
 	  './bower_components/bootstrap/dist/css/bootstrap-theme.css.map',
-	  './bower_components/select2/dist/css/select2.css',
-	  './bower_components/smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.css'
+	  './bower_components/smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.css',
+	  './bower_components/angular-ui-select/dist/select.css'
     ],
 
     fonts: [
