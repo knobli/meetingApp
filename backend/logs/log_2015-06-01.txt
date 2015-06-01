@@ -1,0 +1,16 @@
+2015-06-01 15:08:14 - CRIT --> No post request
+2015-06-01 16:04:30 - ERROR --> <knobli (201)> Userknobli has no login rights
+2015-06-01 16:04:30 - ERROR --> <knobli (201)> Userknobli has no login rights
+2015-06-01 16:06:07 - ERROR --> <knobli (201)> Userknobli has no login rights
+2015-06-01 16:06:07 - ERROR --> <knobli (201)> Userknobli has no login rights
+2015-06-01 16:06:35 - ERROR --> <knobli (201)> Userknobli has no login rights
+2015-06-01 16:07:53 - ERROR --> <knobli (201)> Userknobli has no login rights
+2015-06-01 16:21:50 - ERROR --> Could not save meeting: Undefined method 'getMemberForSignInObject'. The method name must start with either findBy or findOneBy!
+2015-06-01 16:22:28 - ERROR --> Could not save meeting: Undefined method 'getMemberForSignInObject'. The method name must start with either findBy or findOneBy!
+2015-06-01 16:23:42 - ERROR --> Could not save meeting: Undefined method 'getMemberForSignInObject'. The method name must start with either findBy or findOneBy!
+2015-06-01 16:25:29 - ERROR --> Could not save meeting: Undefined method 'getMemberForSignInObject'. The method name must start with either findBy or findOneBy!
+2015-06-01 16:30:28 - ERROR --> Could not save meeting: Undefined method 'getMemberForSignInObject'. The method name must start with either findBy or findOneBy!
+2015-06-01 16:31:38 - ERROR --> Could not save meeting: [Semantical Error] line 0, col 121 near 'se
+	       ': Error: Class Member has no association named signEntries
+2015-06-01 16:31:46 - ERROR --> Could not save meeting: [Semantical Error] line 0, col 121 near 'se
+	       ': Error: Class Member has no association named signEntries
