@@ -31,7 +31,7 @@
             this.members = [];
             $http.post(getAPIUrl() + '/meeting.php' , $.param(meeting)).
                 success(function(data){
-                    if(data.success){
+                    if(data.success === 1){
                         alert("Erfolgreich eingetragen");
                         $location.path('/');
                     } else {
@@ -65,7 +65,7 @@
             $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
             $http.post(getAPIUrl() + '/signinEntries.php', $.param(signinPayload)).
                 success(function(data){
-                    if(data.success){
+                    if(data.success  === 1){
                         alert("Erfolgreich eingetragen");
                         $route.reload();
                     } else {

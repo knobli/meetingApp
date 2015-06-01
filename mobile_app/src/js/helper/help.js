@@ -17,7 +17,7 @@ function getMemberStatusCss(memberStatus){
 }
 
 function getBaseUrl(){
-    return 'https://grafstal.ch/';
+    return 'http://localhost/meetingApp/backend';
 }
 
 function getAjaxUrl() {
