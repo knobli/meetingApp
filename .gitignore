@@ -1,3 +1,4 @@
+*.lock
 .project
 .idea
 .cordova

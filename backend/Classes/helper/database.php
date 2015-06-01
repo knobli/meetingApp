@@ -7,7 +7,7 @@ class Database {
 
     private function __construct() {
 		$dbname="meetingApp"; //Datenbankname
-		$dbserver="localhost"; //Servername z.b.: www.f1club.net oder localhost
+		$dbserver="localhost"; //Servername
 		$dbuser="meetingApp"; //Username bzw. Datenbank-loginname
 		$dbpass="E^78u8+HJ7jTuGJcCh"; //Passwort der Datenbank
 		    	
