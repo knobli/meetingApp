@@ -4,7 +4,7 @@
     app.controller('MeetingController', ['$http', '$routeParams', '$route', '$location', function($http, $routeParams, $route, $location) {
         var meetingCtrl = this;
         meetingCtrl.meetings = [];
-        $http.get(getAPIUrl() + '/meeting.php?memberId=' + getUserId()).success(function (response) {
+        $http.get(getAPIUrl() + '/meeting.php?memberId=' + getUserId() + '&test=' + Math.random() * Math.random(), {cache: false}).success(function (response) {
             meetingCtrl.meetings = response;
         });
         this.getSigninClass = function(status){
@@ -42,7 +42,7 @@
 
         var meetingId = $routeParams.meetingId;
         if(meetingId !== undefined) {
-            $http.get(getAPIUrl() + '/meeting.php?id=' + meetingId + '&memberId=' + getUserId()).success(function (response) {
+            $http.get(getAPIUrl() + '/meeting.php?id=' + meetingId + '&memberId=' + getUserId() + '&test=' + Math.random() * Math.random(), {cache: false}).success(function (response) {
                 meetingCtrl.loadMeeting = response;
             });
         }
