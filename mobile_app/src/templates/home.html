@@ -1,7 +1,8 @@
 <div class="scrollable">
     <div class="scrollable-content" ng-controller="MeetingController as meetingCtrl">
-        <div class="list-group">
-                <a class="list-group-item" href="#/meeting/{{meetingContainer.object.id}}" ng-repeat="meetingContainer in meetingCtrl.meetings" ng-class="meetingCtrl.getSigninClass(meetingContainer.status)">
+        <div class="list-group" ng-repeat="meetingContainer in meetingCtrl.meetings">
+            <div class="list-divider"><b>{{meetingContainer.object.startDate.date | myDate:'dd.MM.yyyy'}}</b></div>
+                <a class="list-group-item" href="#/meeting/{{meetingContainer.object.id}}" ng-class="meetingCtrl.getSigninClass(meetingContainer.status)">
                     <fieldset class="ui-grid-a">
                         <div class="ui-block-a">
                             <h2>{{meetingContainer.object.name}}</h2>
