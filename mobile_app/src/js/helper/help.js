@@ -17,7 +17,7 @@ function getMemberStatusCss(memberStatus){
 }
 
 function getBaseUrl(){
-    return 'http://localhost/meetingApp/backend';
+    return 'http://www.knob.li/meetingApp/backend';
 }
 
 function getAjaxUrl() {
