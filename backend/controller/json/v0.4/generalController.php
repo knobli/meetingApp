@@ -1,10 +1,11 @@
 <?php
+//error_reporting(E_ALL);
+//ini_set('display_errors', 'on');
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, DELETE');
 header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept');
 require '../../../class_includes.php';
-require '../../../functions.php';
 require '../../../functions_permissions.php';
 
 $memberId=null;

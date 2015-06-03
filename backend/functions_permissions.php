@@ -1,11 +1,5 @@
 <?php
 use Doctrine\Common\Collections\Collection;
-function getUserID($db = null) {
-    if(AccountService::getInstance()->isLoggedIn()){
-        return AccountService::getInstance()->getCurrentAccountId();
-    }
-    return null;
-}
 /**
  * @return Member
  */
@@ -15,12 +9,6 @@ function getMitglied(){
         global $entityManager;
         $member = $entityManager->find('Member', $memberId);
         return $member;
-    }
-    return null;
-}
-function getMitgliedID($dummy = "") {
-    if(AccountService::getInstance()->isLoggedIn()) {
-        return AccountService::getInstance()->getCurrentMemberId();
     }
     return null;
 }

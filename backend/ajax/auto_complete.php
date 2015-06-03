@@ -5,7 +5,7 @@ $db = Database::getConnection();
 
 $q = strtolower($_GET["term"]);
 if (!$q){
-	Logger::getLogger()->logCrit("auto_complete: No querry string given");
+	Logger::getLogger()->logCrit("auto_complete: No query string given");
 	return;
 }
 
