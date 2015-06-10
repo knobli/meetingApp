@@ -27,8 +27,6 @@
         var meeting = this.meeting;
         this.submitForm = function(){
             $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
-            var memberController = this;
-            this.members = [];
             $http.post(getAPIUrl() + '/meeting.php' , $.param(meeting)).
                 success(function(data){
                     if(data.success === 1){
